@@ -2,6 +2,7 @@
 
 #include <Windows.h>
 #include <WinUser.h>
+#include <iostream>
 #include "../player_ship/PlayerShip.h"
 #include "../space_ship/SpaceShip.h"
 
@@ -24,7 +25,7 @@ public:
 	void startGame();
 	void updateGame();
 	void endGame();
-	void getGameStatus();
+	int getGameStatus() const;
 
 private:
 	/* 

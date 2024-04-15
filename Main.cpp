@@ -8,7 +8,9 @@ int main() {
 	
 	// game main loop
 	Game game;
+	game.startGame();
 	while (true) {
+		game.updateGame();
 
 		Sleep(20);
 	}

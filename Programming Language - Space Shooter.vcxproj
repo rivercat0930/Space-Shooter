@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="asteroid\Asteroid.h" />
     <ClInclude Include="game\Game.h" />
+    <ClInclude Include="game\GameScope.h" />
     <ClInclude Include="player_ship\PlayerShip.h" />
     <ClInclude Include="space_ship\SpaceShip.h" />
   </ItemGroup>

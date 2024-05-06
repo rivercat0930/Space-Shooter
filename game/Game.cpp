@@ -53,21 +53,54 @@ void Game::updateGame() {
 		break;
 	}
 
-	// is collision player ship
-
-	// is collision space ship (miss some store and it is big or medium)
-
 	// update player position
 	this->playerShip.updatePosition(playerNextStep);
 
-	// change asteroid position
-	// for.......
+	// change asteroid position and trying to spawn it
+	for (int i = 0; i < 30; i++) {
+		bool isCollision = this->asteroid[i].getPositionX() == this->playerShip.getPositionX() && this->asteroid[i].getPositionY() == this->playerShip.getPositionY();
+		bool isOut = this->asteroid[i].getPositionY() > Y_AXIS_MAX;
+		bool needDestroy = false;
+
+		/* 
+		* check is collision or not
+		* if collision then take away health from playerShip
+		* and destroy this asteroid
+		* 
+		* else if 
+		* 
+		* else change this asteroid position
+		*/
+		if (isCollision) {
+			int damage = this->asteroid[i].getHealth();
+			this->spaceShip.setHealth(-damage);
+
+			// destroy asteroid
+		}
+		else if (isOut) {
+			...
+		}
+		else
+			this->asteroid[i].setPositionY(this->asteroid[i].getPositionY() + 1);
+
+		if (needDestroy) {
+			...
+		}
+
+		std::cout << this->asteroid[i].getHealth() << " ";
+	}
+
+	// end game
+	if (this->spaceShip.getHealth() == 0 || this->playerShip.getHealth() == 0)
+		this->endGame();
 
 	// DEBUG USE
 	system("cls");
 	std::cout << "X: " << this->playerShip.getPositionX() << "\n";
 	std::cout << "Y: " << this->playerShip.getPositionY() << "\n";
 	std::cout << "HP: " << this->playerShip.getHealth() << "\n";
+	std::cout << "====\n";
+	std::cout << "HP_SpaceShip: " << this->spaceShip.getHealth() << "\n";
 }
 
 void Game::endGame() {

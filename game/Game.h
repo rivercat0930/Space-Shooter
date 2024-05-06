@@ -5,7 +5,10 @@
 #include <iostream>
 #include "../player_ship/PlayerShip.h"
 #include "../space_ship/SpaceShip.h"
+#include "../asteroid/Asteroid.h"
+#include "./GameScope.h"
 
+// key input
 #define W 0x57
 #define A 0x41
 #define S 0x53
@@ -21,6 +24,7 @@ public:
 
 	PlayerShip playerShip;
 	SpaceShip spaceShip;
+	Asteroid asteroid[30];
 
 	void startGame();
 	void updateGame();

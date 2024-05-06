@@ -44,5 +44,8 @@
     <ClInclude Include="asteroid\Asteroid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="game\GameScope.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

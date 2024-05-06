@@ -20,7 +20,7 @@ public:
 	int getPositionX();
 	int getPositionY();
 
-	void setPositionY(int y);
+	void setPositionX(int x);
 
 private:
 	int health;

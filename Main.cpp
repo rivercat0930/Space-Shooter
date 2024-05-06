@@ -13,12 +13,15 @@ int main() {
 	Game game;
 	game.startGame();
 	while (true) {
+		system("cls");
+
 		game.updateGame();
 
 		if (game.getGameStatus() == 2)
 			break;
 
 		Sleep(20);
+		//Sleep(2000);
 	}
 
 	// release resources

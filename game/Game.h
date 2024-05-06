@@ -17,6 +17,8 @@
 #define K 0x4B
 #define L 0x4C
 
+#define DEBUG 1
+
 class Game {
 public:
 	Game();

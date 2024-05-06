@@ -56,10 +56,15 @@ void Game::updateGame() {
 	// update player position
 	this->playerShip.updatePosition(playerNextStep);
 
+#ifdef DEBUG
+	std::cout << "Asteroids position and health:\n";
+#endif // DEBUG
+
+
 	// change asteroid position and trying to spawn it
 	for (int i = 0; i < 30; i++) {
 		bool isCollision = this->asteroid[i].getPositionX() == this->playerShip.getPositionX() && this->asteroid[i].getPositionY() == this->playerShip.getPositionY();
-		bool isOut = this->asteroid[i].getPositionY() > Y_AXIS_MAX;
+		bool isOut = this->asteroid[i].getPositionX() > X_AXIS_MAX;
 		bool needDestroy = false;
 
 		/* 
@@ -73,34 +78,43 @@ void Game::updateGame() {
 		*/
 		if (isCollision) {
 			int damage = this->asteroid[i].getHealth();
+			this->playerShip.setHealth(-damage);
+
+			// destroy asteroid
+			needDestroy = true;
+		}
+		else if (isOut) {
+			int damage = this->asteroid[i].getHealth();
 			this->spaceShip.setHealth(-damage);
 
 			// destroy asteroid
-		}
-		else if (isOut) {
-			...
+			needDestroy = true;
 		}
 		else
-			this->asteroid[i].setPositionY(this->asteroid[i].getPositionY() + 1);
+			this->asteroid[i].setPositionX(this->asteroid[i].getPositionX() + 1);
 
 		if (needDestroy) {
-			...
+			this->asteroid[i] = Asteroid();
 		}
 
-		std::cout << this->asteroid[i].getHealth() << " ";
+#ifdef DEBUG
+		std::cout << this->asteroid[i].getPositionX() << " " << this->asteroid[i].getPositionY() << " " << this->asteroid[i].getHealth() << "\n";
+#endif // DEBUG
 	}
 
 	// end game
-	if (this->spaceShip.getHealth() == 0 || this->playerShip.getHealth() == 0)
+	if (this->spaceShip.getHealth() <= 0 || this->playerShip.getHealth() <= 0)
 		this->endGame();
 
-	// DEBUG USE
-	system("cls");
+
+#ifdef DEBUG
+	std::cout << "Player Info:\n";
 	std::cout << "X: " << this->playerShip.getPositionX() << "\n";
 	std::cout << "Y: " << this->playerShip.getPositionY() << "\n";
 	std::cout << "HP: " << this->playerShip.getHealth() << "\n";
 	std::cout << "====\n";
 	std::cout << "HP_SpaceShip: " << this->spaceShip.getHealth() << "\n";
+#endif
 }
 
 void Game::endGame() {

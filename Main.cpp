@@ -68,6 +68,7 @@ int main()
 {
 	Game game;
 	Player player(385, 575);
+	SpaceShip spaceShip;
 
 	std::cout << "Game initialized!\n";
 
@@ -113,7 +114,7 @@ int main()
 		// ===== Render Output =====
 
 		// ===== Check game status =====
-		isGameRunning = game.check();
+		isGameRunning = game.check(player, spaceShip);
 
 		// ===== Force exit game (press esc) =====
 		if (action == -1)

@@ -24,7 +24,7 @@ public:
 
 private:
 	int health;
-	
+
 	const int width = 30;
 	const int height = 15;
 

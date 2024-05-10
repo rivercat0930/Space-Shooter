@@ -95,3 +95,10 @@ bool Game::check(Player player, SpaceShip spaceShip)
 {
 	return player.getHealth() > 0 && spaceShip.getHealth() > 0;
 }
+
+#ifdef DEBUG
+std::vector<Asteroid> Game::getAsteroids()
+{
+	return this->asteroids;
+}
+#endif

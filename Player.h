@@ -15,6 +15,12 @@ public:
 	void updateProjectiles();
 	void useSkill(int val);
 	int getHealth() const;
+	int getPositionX() const;
+	int getPositionY() const;
+	void setHealth(int dHealth);
+	std::vector<Projectile>& getProjectiles();
+	int getWidth() const;
+	int getHeight() const;
 
 private:
 	int health;

@@ -109,7 +109,7 @@ int main()
 
 		// update projectiles
 		player.updateProjectiles();
-		game.update();
+		game.update(player, spaceShip);
 
 		// ===== Render Output =====
 

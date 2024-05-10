@@ -77,7 +77,20 @@ int main()
 	{
 		// ===== Debug information =====
 #ifdef DEBUG
+		std::cout << "\033[1;1H";
 
+		std::cout << "Player position: (" << player.getPositionX() << ", " << player.getPositionY() << "\n";
+		std::cout << "Player health: " << player.getHealth();
+		std::cout << "Space health: " << spaceShip.getHealth();
+		
+		std::cout << "Asteroid position (x, y, health):\n";
+		std::vector<Asteroid> temp = game.getAsteroids();
+		for (auto asteroid : temp)
+		{
+			std::cout << asteroid.getPositionX() << ", " << asteroid.getPositionY() << ", " << asteroid.getHealth();
+		}
+
+		std::cout << "\033[J";
 #endif
 
 		// ===== Process input =====

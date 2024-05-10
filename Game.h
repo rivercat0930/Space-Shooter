@@ -22,6 +22,10 @@ public:
 	* else return false
 	*/
 	bool check(Player player, SpaceShip spaceShip);
+#ifdef DEBUG
+	std::vector<Asteroid> getAsteroids();
+#endif
+
 
 private:
 	int score;

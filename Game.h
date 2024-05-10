@@ -15,7 +15,7 @@ public:
 	Game();
 
 	int getScore() const;
-	void update(Player player, SpaceShip spaceShip);
+	void update(Player& player, SpaceShip& spaceShip);
 	/*
 	* Check Player or SpaceShip still alive or not
 	* if alive then game continue, return true

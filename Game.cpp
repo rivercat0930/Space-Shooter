@@ -14,7 +14,7 @@ int Game::getScore() const
 	return this->score;
 }
 
-void Game::update(Player player, SpaceShip spaceShip)
+void Game::update(Player& player, SpaceShip& spaceShip)
 {
 	// ===== Spawn new asteroid =====
 	this->end = std::chrono::high_resolution_clock::now();
@@ -85,7 +85,7 @@ void Game::update(Player player, SpaceShip spaceShip)
 
 		// should delete this asteroid or not
 		if (destroy || asteroid->getHealth() <= 0)
-			asteroids.erase(asteroid);
+			asteroid = asteroids.erase(asteroid);
 		else
 			asteroid++;
 	}

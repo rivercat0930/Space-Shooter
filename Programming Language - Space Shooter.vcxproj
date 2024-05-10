@@ -18,6 +18,19 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Asteroid.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameConfig.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Projectile.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -127,20 +140,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="asteroid\Asteroid.cpp" />
-    <ClCompile Include="game\Game.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="player_ship\PlayerShip.cpp" />
-    <ClCompile Include="space_ship\SpaceShip.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="asteroid\Asteroid.h" />
-    <ClInclude Include="game\Game.h" />
-    <ClInclude Include="game\GameScope.h" />
-    <ClInclude Include="player_ship\PlayerShip.h" />
-    <ClInclude Include="space_ship\SpaceShip.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

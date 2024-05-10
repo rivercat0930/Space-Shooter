@@ -13,38 +13,44 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{d17bb158-f4d6-48fa-805a-90595d8ab058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{d7343dd5-a47b-4a4c-ba07-b41d32e346e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Projectile">
+      <UniqueIdentifier>{e1906f69-35f7-4830-a862-89b53d1c9a27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game\Game.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Game.cpp">
+      <Filter>Header Files\Game</Filter>
     </ClCompile>
-    <ClCompile Include="space_ship\SpaceShip.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Player.cpp">
+      <Filter>Header Files\Player</Filter>
     </ClCompile>
-    <ClCompile Include="player_ship\PlayerShip.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="asteroid\Asteroid.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Header Files\Projectile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="game\Game.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Player</Filter>
     </ClInclude>
-    <ClInclude Include="space_ship\SpaceShip.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
-    <ClInclude Include="player_ship\PlayerShip.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="GameConfig.h">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
-    <ClInclude Include="asteroid\Asteroid.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Projectile.h">
+      <Filter>Header Files\Projectile</Filter>
     </ClInclude>
-    <ClInclude Include="game\GameScope.h">
+    <ClInclude Include="Asteroid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

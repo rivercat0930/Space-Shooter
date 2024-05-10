@@ -1,9 +1,8 @@
 #include <iostream>
 #include <Windows.h>
-#include "./Player.h"
-
-// Debug switch
-#define DEBUG true
+#include "Game.h"
+#include "GameConfig.h"
+#include "Player.h"
 
 /*
 * Receive player input and return specific codes to indicate the current state:
@@ -67,25 +66,58 @@ int userInput()
 
 int main()
 {
-	Player player(100, 100);
+	Game game;
+	Player player(385, 575);
 
 	std::cout << "Game initialized!\n";
-
-	// ====================
 
 	bool isGameRunning = true;
 	while (isGameRunning)
 	{
-		// Process input
+		// ===== Debug information =====
+#ifdef DEBUG
+
+#endif
+
+		// ===== Process input =====
+		// Receive user input and determine the next step
 		int action = userInput();
 
-		// Update game status
-		player.move(1, 0);
+		// ===== Update game status =====
+		// player move
+		if (action == 11)
+			player.move(0, 10);
+		if (action == 12)
+			player.move(10, 0);
+		if (action == 13)
+			player.move(0, -10);
+		if (action == 14)
+			player.move(-10, 0);
 
-		// Render Output
+		// player attack
+		if (action == 2)
+			player.attack();
 
-		// Force exit game (press esc)
+		// player using skill
+		if (action == 31)
+			player.useSkill(0);
+		if (action == 32)
+			player.useSkill(1);
+		if (action == 33)
+			player.useSkill(2);
 
+		// update projectiles
+		player.updateProjectiles();
+		game.update();
+
+		// ===== Render Output =====
+
+		// ===== Force exit game (press esc) =====
+		if (action == -1)
+			isGameRunning = false;
+
+		// ===== Delay =====
+		Sleep(200);
 	}
 
 	std::cout << "Game Over!\n";

@@ -14,6 +14,7 @@ public:
 	void attack();
 	void updateProjectiles();
 	void useSkill(int val);
+	int getHealth() const;
 
 private:
 	int health;

@@ -112,6 +112,9 @@ int main()
 
 		// ===== Render Output =====
 
+		// ===== Check game status =====
+		isGameRunning = game.check();
+
 		// ===== Force exit game (press esc) =====
 		if (action == -1)
 			isGameRunning = false;

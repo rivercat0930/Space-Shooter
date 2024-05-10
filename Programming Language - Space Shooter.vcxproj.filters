@@ -22,6 +22,12 @@
     <Filter Include="Header Files\Projectile">
       <UniqueIdentifier>{e1906f69-35f7-4830-a862-89b53d1c9a27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SpaceShip">
+      <UniqueIdentifier>{fb90412d-9f55-4f44-b6c6-b938b207baa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Asteroid">
+      <UniqueIdentifier>{23fc5ee9-6b16-488d-b564-96d147a0edeb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -51,7 +57,10 @@
       <Filter>Header Files\Projectile</Filter>
     </ClInclude>
     <ClInclude Include="Asteroid.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Asteroid</Filter>
+    </ClInclude>
+    <ClInclude Include="SpaceShip.h">
+      <Filter>Header Files\SpaceShip</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

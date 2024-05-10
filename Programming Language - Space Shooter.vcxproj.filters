@@ -42,6 +42,12 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>Header Files\Projectile</Filter>
     </ClCompile>
+    <ClCompile Include="Asteroid.cpp">
+      <Filter>Header Files\Asteroid</Filter>
+    </ClCompile>
+    <ClCompile Include="SpaceShip.cpp">
+      <Filter>Header Files\SpaceShip</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h">

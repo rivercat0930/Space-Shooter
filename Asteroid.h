@@ -6,7 +6,7 @@ public:
 	Asteroid(int x, int y, int speed, int health);
 
 	void move();
-	void updateHealth(int val);
+	void updateHealth(int dHealth);
 	int getHealth() const;
 	int getPositionX() const;
 	int getPositionY() const;
